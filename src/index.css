@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card-hover {
+    @apply transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-xl hover:bg-xlkey-light hover:bg-opacity-20;
+  }
+  
+  .icon-hover {
+    @apply transition-all duration-300 ease-in-out transform;
+  }
+  
+  .icon-container:hover .icon-hover {
+    @apply scale-110 rotate-3;
+  }
+  
+  .step-card {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .step-card:hover {
+    @apply bg-xlkey-light bg-opacity-20 shadow-lg;
+  }
+  
+  .step-card:hover .step-icon {
+    @apply bg-xlkey-light scale-110;
+  }
+  
+  /* Flip card styles */
+  .flip-card {
+    @apply perspective-1000 h-full;
+  }
+  
+  .flip-card-inner {
+    @apply relative w-full h-full transition-transform duration-700 transform-style-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    @apply rotate-y-180;
+  }
+  
+  .flip-card-front, .flip-card-back {
+    @apply absolute w-full h-full backface-hidden;
+  }
+  
+  .flip-card-back {
+    @apply rotate-y-180;
+  }
+}
